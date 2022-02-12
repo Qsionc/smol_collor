@@ -1,7 +1,8 @@
-# smol::color
+# `smol::color`
 
 Welcome to another useless library that i created because i had few free minutes.<br>
 What this library does, is:
+
 ```shell
 $ echo "\033[01;33mFunny Coloring"
 Funny Coloring
@@ -10,7 +11,8 @@ Funny Coloring
 Just believe, that 'Funny Coloring' is in bold yellow - trust.
 
 ---
-# Installation
+
+## Installation
 
 Just run
 
@@ -20,6 +22,7 @@ $ cd build
 $ cmake .. -DCMAKE_INSTALL_PREFIX="${HOME}/.local/" # Path to your local folder
 $ cmake --build . --target install
 ```
+
 if you want `debug` or
 
 ```shell
@@ -31,7 +34,19 @@ $ cmake --build . --target install
 
 if u want `release`
 
+___
+## Usage
+
+In `CmakeLists.txt` add:
+
+```cmake
+find_package(smollor)
+...
+target_link_libraries(your_program smollor::smollor)
+```
+
 Then just include in your program where you want colors on terminal:
+
 ```C++
 #include <iostream>
 #include <smol_color.h>
@@ -43,7 +58,9 @@ int main() {
     return 0;
 }
 ```
+
 This should return yellow `Funny Coloring` but you never know...
 
 ---
-##Enjoy!
+
+## Enjoy!
